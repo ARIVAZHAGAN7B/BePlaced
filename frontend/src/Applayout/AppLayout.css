@@ -1,4 +1,8 @@
+*{
+    background-color: rgb(244, 242, 238);
+}
 .container{
+    background-color: rgb(255, 255, 255);
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
