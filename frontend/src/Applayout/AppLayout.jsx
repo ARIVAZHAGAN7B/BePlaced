@@ -6,6 +6,7 @@ import Roles from '../pages/Roles/Roles'
 import Skills from '../pages/Skills/Skills'
 import Jobs from '../pages/Jobs/Jobs'
 import UserRoutes from '../routes/UserRoutes/UserRoutes'
+import Home from '../pages/Home/Home'
 import "./AppLayout.css"
 const AppLayout = () => {
   return (
@@ -13,7 +14,6 @@ const AppLayout = () => {
       <Navbar />
       <div className='container'>
       <UserRoutes/>
-        <Jobs/>
       </div>
     </div>
   )

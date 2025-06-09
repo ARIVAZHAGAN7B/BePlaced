@@ -93,7 +93,7 @@ const Jobs = () => {
     const jobPostingsArray = Object.values(jobPostings)
   return (
     <>
-      <div className='container'>
+      <div className='container' style={{backgroundColor:"white"}}>
         {
             jobPostingsArray.map((job,index) => (
                 <div className='job-card' key={index}>

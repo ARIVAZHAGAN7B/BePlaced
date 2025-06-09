@@ -47,11 +47,13 @@ const Companies = () => {
 
   return (
     <div>
-      <h1 className='titles'>Top Companies You Can Offer</h1>
+        <div style={{display:"flex",justifyContent:"center",width:"100%",margin:"10px",backgroundColor:"white"}}>
+            <h1 className='titles'>Top Companies You Can Offer</h1>
+        </div>
       <div className='companies'>
         {
             companiesArray.map((company,index) => (
-                <div key={index}>
+                <div key={index} style={{}}>
                     {company.companyName} 
                     <img src={company.companyLogo} alt='companyLogo'/>
                 </div>

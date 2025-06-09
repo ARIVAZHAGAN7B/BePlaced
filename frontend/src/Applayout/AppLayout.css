@@ -1,12 +1,12 @@
-*{
+body{
     background-color: rgb(244, 242, 238);
+    margin: 0;
 }
 .container{
-    background-color: rgb(255, 255, 255);
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
-    max-width: 1200px; /* Or 1140px, 960px */
+    max-width: 1200px;
     padding-left: 20px;
     padding-right: 20px;
 }
