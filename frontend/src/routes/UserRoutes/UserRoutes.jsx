@@ -8,7 +8,7 @@ import Jobs from '../../pages/Jobs/Jobs'
 import Home from '../../pages/Home/Home'
 import Notifications from '../../components/Notifications/Notifications'
 import Mail from '../../components/Mail/Mail'
-import Profile from '../../pages/Profile/Profile'
+import Profile from "../../pages/Profile/Profile"
 const UserRoutes = () => {
   return (
     <Routes>
@@ -20,7 +20,7 @@ const UserRoutes = () => {
       <Route path="/jobs" element={<Jobs/>}/>
       <Route path='/notification' element={<Notifications/>}/>
       <Route path="/mail" element={<Mail/>}/>
-      <Route Path="/profile" element={<Profile/>} />
+      <Route path="/profile" element={<Profile/>}/>
     </Routes>
   )
 }
