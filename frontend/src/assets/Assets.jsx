@@ -1,4 +1,4 @@
-import BeplacedLogo from "./BeplacedLogo.png"
+import BeplacedLogo from "./BePlacedLogo.png"
 import expressLogo from "./expressLogo.png"
 import mongodb from "./mongodb.png"
 import node from "./node.png"
