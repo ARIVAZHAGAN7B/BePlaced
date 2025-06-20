@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Beplaced from "../../assets/BeplacedLogo.png"
+import Beplaced from "../../assets/BePlacedLogo.png"
 const Navbar = () => {
   const navigate = useNavigate();
 
