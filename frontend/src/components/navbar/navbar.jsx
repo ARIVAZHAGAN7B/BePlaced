@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-
+import Beplaced from "../../assets/BeplacedLogo.png"
 const Navbar = () => {
   const navigate = useNavigate();
 
@@ -17,6 +17,9 @@ const Navbar = () => {
       }}
     >
       {/* Left section: Logo */}
+      <div className="logo">
+          <img src={Beplaced} alt="logo" style={{height:"50px",margin:"0px"}}/>
+      </div>
       <div
         onClick={() => navigate("/")}
         style={{

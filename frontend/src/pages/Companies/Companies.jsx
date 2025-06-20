@@ -73,6 +73,7 @@ const Companies = () => {
                 </div>
               ))}
             </div>
+            <button style={{backgroundColor:'lightblue' , marginTop:"5px" , width:"100%" , padding:"5px 10px"}}>View</button>
           </div>
         ))}
       </div>
