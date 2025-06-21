@@ -1,0 +1,129 @@
+.jobs-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.job-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  padding: 24px 28px;
+  margin-bottom: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  outline-offset: 4px;
+}
+
+.job-card:hover,
+.job-card:focus-within {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  outline: none;
+}
+
+.job-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.company-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
+  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.1));
+}
+
+.job-title-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.job-title {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.company-name {
+  font-size: 1rem;
+  color: #0072ff;
+  text-decoration: none;
+  margin-top: 4px;
+}
+
+.company-name:hover,
+.company-name:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+.job-description {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+.job-meta {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  color: #555;
+  font-size: 0.95rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.job-meta li {
+  flex: 1 1 45%;
+}
+
+.job-skills {
+  margin-bottom: 16px;
+}
+
+.job-skills strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #222;
+  font-weight: 600;
+}
+
+.job-skills ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 0;
+  color: #444;
+}
+
+.apply-link {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.apply-link a {
+  color: #0072ff;
+  text-decoration: none;
+}
+
+.apply-link a:hover,
+.apply-link a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+.deadline {
+  font-weight: 500;
+  color: #666;
+  font-size: 0.9rem;
+}

@@ -17,21 +17,22 @@ const Navbar = () => {
       }}
     >
       {/* Left section: Logo */}
-      <div className="logo">
-          <img src={Beplaced} alt="logo" style={{height:"50px",margin:"0px"}}/>
-      </div>
       <div
-        onClick={() => navigate("/")}
-        style={{
-          cursor: "pointer",
-          fontSize: "20px",
-          fontFamily: "Roboto, sans-serif",
-          fontWeight: "bold",
-          userSelect: "none",
-        }}
-      >
-        Beplaced
+            onClick={() => navigate("/")}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              cursor: "pointer",
+              fontSize: "20px",
+              fontFamily: "Roboto, sans-serif",
+              fontWeight: "bold",
+              userSelect: "none",
+            }}
+          >
+          <img src={Beplaced} alt="logo" style={{ height: "40px", marginRight: "10px" }} />
+            Beplaced
       </div>
+
 
       {/* Middle section: Search */}
       <div

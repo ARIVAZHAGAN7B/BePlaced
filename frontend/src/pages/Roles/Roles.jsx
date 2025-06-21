@@ -1,5 +1,6 @@
-import React from 'react';
-import Assets from '../../assets/Assets';
+import React from "react";
+import Assets from "../../assets/Assets";
+import "./Roles.css";
 
 const Roles = () => {
   const Roles = {
@@ -12,13 +13,13 @@ const Roles = () => {
       responsibilities: [
         "Build reusable UI components",
         "Collaborate with backend developers and designers",
-        "Optimize applications for speed and scalability"
+        "Optimize applications for speed and scalability",
       ],
       tools: ["React", "Redux", "Git", "Webpack"],
       education: "Bachelor's in Computer Science or related field",
       salaryRange: "6-10 LPA",
       reportingTo: "Engineering Manager",
-      extra: {}
+      extra: {},
     },
     "2": {
       roleName: "Backend Developer",
@@ -29,30 +30,31 @@ const Roles = () => {
       responsibilities: [
         "Design RESTful APIs",
         "Manage database schema",
-        "Implement authentication and authorization"
+        "Implement authentication and authorization",
       ],
       tools: ["Node.js", "MongoDB", "Docker", "Postman"],
       education: "Bachelor's in Computer Science",
       salaryRange: "7-12 LPA",
       reportingTo: "Tech Lead",
-      extra: {}
+      extra: {},
     },
     "3": {
       roleName: "Data Scientist",
       skillSet: ["Python", "Pandas", "Scikit-learn", "Machine Learning", "Statistics"],
       experience: "2+ years",
-      description: "Analyze data and build predictive models to drive decision making.",
+      description:
+        "Analyze data and build predictive models to drive decision making.",
       location: "Hybrid",
       responsibilities: [
         "Collect and clean data",
         "Build ML models",
-        "Present insights to stakeholders"
+        "Present insights to stakeholders",
       ],
       tools: ["Jupyter", "TensorFlow", "SQL"],
       education: "Master's in Data Science or related field",
       salaryRange: "8-15 LPA",
       reportingTo: "Head of Data Science",
-      extra: {}
+      extra: {},
     },
     "4": {
       roleName: "DevOps Engineer",
@@ -63,13 +65,13 @@ const Roles = () => {
       responsibilities: [
         "Automate deployment processes",
         "Manage cloud infrastructure",
-        "Monitor system performance"
+        "Monitor system performance",
       ],
       tools: ["AWS", "Jenkins", "Terraform", "Prometheus"],
       education: "Bachelor's in IT or related",
       salaryRange: "9-14 LPA",
       reportingTo: "Infrastructure Manager",
-      extra: {}
+      extra: {},
     },
     "5": {
       roleName: "Product Manager",
@@ -80,85 +82,86 @@ const Roles = () => {
       responsibilities: [
         "Define product vision and strategy",
         "Coordinate cross-functional teams",
-        "Gather and prioritize requirements"
+        "Gather and prioritize requirements",
       ],
       tools: ["JIRA", "Confluence", "Trello"],
       education: "MBA or related field",
       salaryRange: "12-20 LPA",
       reportingTo: "Director of Product",
-      extra: {}
-    }
+      extra: {},
+    },
   };
 
   const RolesArray = Object.values(Roles);
 
   return (
-    <div style={{ backgroundColor: '#f7f7f7', padding: '30px' }}>
-      <h1 style={{ textAlign: 'center', fontSize: '32px', marginBottom: '30px' }}>
-        🎯 Roles You Can Apply For
-      </h1>
+    <section className="roles-section">
+      <h1 className="roles-title">🎯 Roles You Can Apply For</h1>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '20px' }}>
+      <div className="roles-grid">
         {RolesArray.map((role, index) => (
-          <div key={index} style={{
-            backgroundColor: 'white',
-            padding: '20px',
-            borderRadius: '16px',
-            boxShadow: '0 4px 16px rgba(0,0,0,0.1)'
-          }}>
-            <h2 style={{ color: '#333', marginBottom: '10px' }}>{role.roleName}</h2>
-            <p style={{ fontStyle: 'italic', marginBottom: '10px' }}>{role.description}</p>
+          <article className="role-card" key={index}>
+            <h2 className="role-name">{role.roleName}</h2>
+            <p className="role-description">{role.description}</p>
 
-            <div style={{ marginBottom: '10px' }}>
-              <strong>Experience:</strong> {role.experience} <br />
-              <strong>Location:</strong> {role.location} <br />
-              <strong>Education:</strong> {role.education} <br />
-              <strong>Salary:</strong> {role.salaryRange} <br />
-              <strong>Reporting To:</strong> {role.reportingTo}
+            <div className="role-info">
+              <p>
+                <strong>Experience:</strong> {role.experience}
+              </p>
+              <p>
+                <strong>Location:</strong> {role.location}
+              </p>
+              <p>
+                <strong>Education:</strong> {role.education}
+              </p>
+              <p>
+                <strong>Salary:</strong> {role.salaryRange}
+              </p>
+              <p>
+                <strong>Reporting To:</strong> {role.reportingTo}
+              </p>
             </div>
 
-            <div style={{ marginBottom: '10px' }}>
+            <div className="role-skills">
               <strong>Skills:</strong>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginTop: '5px' }}>
+              <div className="skills-list">
                 {role.skillSet.map((skill, idx) => (
-                  <div key={idx} style={{
-                    backgroundColor: '#eef1f6',
-                    borderRadius: '20px',
-                    padding: '6px 10px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    fontSize: '13px'
-                  }}>
+                  <span className="skill-pill" key={idx}>
                     {Assets[skill] && (
-                      <img src={Assets[skill]} alt={skill} style={{ height: '18px', marginRight: '5px' }} />
+                      <img
+                        src={Assets[skill]}
+                        alt={skill}
+                        className="skill-icon"
+                        loading="lazy"
+                      />
                     )}
                     {skill}
-                  </div>
+                  </span>
                 ))}
               </div>
             </div>
 
-            <div style={{ marginBottom: '10px' }}>
+            <div className="role-tools">
               <strong>Tools:</strong>
-              <ul style={{ marginTop: '5px', paddingLeft: '18px' }}>
+              <ul>
                 {role.tools.map((tool, idx) => (
                   <li key={idx}>{tool}</li>
                 ))}
               </ul>
             </div>
 
-            <div>
+            <div className="role-responsibilities">
               <strong>Responsibilities:</strong>
-              <ul style={{ marginTop: '5px', paddingLeft: '18px' }}>
+              <ul>
                 {role.responsibilities.map((resp, idx) => (
                   <li key={idx}>{resp}</li>
                 ))}
               </ul>
             </div>
-          </div>
+          </article>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

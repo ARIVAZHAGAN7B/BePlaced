@@ -1,20 +1,129 @@
+/* Container */
+.companies-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  background: #fafafa;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgb(0 0 0 / 0.05);
+}
+
+/* Header */
+.companies-header h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Grid layout */
 .companies-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
   justify-content: center;
 }
 
+/* Card */
 .company-card {
-  background-color: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  transition: transform 0.3s ease;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgb(0 0 0 / 0.12);
+  padding: 24px 20px 32px;
   text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.company-card:hover {
-  transform: scale(1.05);
+.company-card:hover,
+.company-card:focus-within {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgb(0 0 0 / 0.18);
+  outline: none;
+}
+
+/* Company Logo */
+.company-logo {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 20px;
+  user-select: none;
+  pointer-events: none;
+  filter: drop-shadow(0 0 1px rgb(0 0 0 / 0.1));
+}
+
+/* Company Name */
+.company-name {
+  font-size: 1.4rem;
+  color: #111;
+  font-weight: 600;
+  margin-bottom: 18px;
+  user-select: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Skills Wrapper */
+.skills-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  max-width: 100%;
+}
+
+/* Skill Pill */
+.skill-pill {
+  display: flex;
+  align-items: center;
+  background-color: #e6f0ff;
+  border-radius: 50px;
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #0057d9;
+  user-select: none;
+  box-shadow: 0 1px 4px rgb(0 87 217 / 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.skill-pill:hover {
+  background-color: #c7dbff;
+}
+
+.skill-icon {
+  height: 18px;
+  width: 18px;
+  margin-right: 8px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 0.5px rgb(0 87 217 / 0.6));
+}
+
+/* View Button */
+.view-btn {
+  width: 100%;
+  background-color: #0057d9;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 0;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgb(0 87 217 / 0.3);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+.view-btn:hover,
+.view-btn:focus {
+  background-color: #003eaa;
+  box-shadow: 0 8px 20px rgb(0 62 170 / 0.5);
+  outline: none;
 }
